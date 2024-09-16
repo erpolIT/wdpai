@@ -117,8 +117,6 @@ function displayErrors(form, errors) {
 }
 
 function clearErrors(form) {
-    // Usuń wszystkie komunikaty o błędach
     form.querySelectorAll('.error-message').forEach(el => el.remove());
-    // Usuń klasę błędu z pól formularza
     form.querySelectorAll('.error-border').forEach(el => el.classList.remove('error-border'));
 }
