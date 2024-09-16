@@ -42,4 +42,10 @@ class Request
     {
         return $this->getMethod() == 'post';
     }
+
+    public function isDelete(): bool
+    {
+        return $this->getMethod() == 'delete';
+    }
+
 }

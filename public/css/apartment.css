@@ -4,6 +4,17 @@
     margin: 20px auto;
 }
 
+.flight-info{
+    margin-bottom: 20px;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 2fr auto;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 .sort-form-group {
     margin-bottom: 30px;
 }

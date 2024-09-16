@@ -31,5 +31,7 @@ $app->router->post('/apartments/create', ['ApartmentController', 'create']);
 
 $app->router->post('/profile/update', ['ProfileController', 'updateProfile']);
 
+$app->router->delete('/reservations/{id}', ['ReservationController', 'deleteReservation']);
+
 
 $app->run();

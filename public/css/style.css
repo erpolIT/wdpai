@@ -1,275 +1,187 @@
+
+
 /*body {*/
-/*    background-color: beige;*/
-
 /*    margin: 0;*/
+/*    font-family: Arial, sans-serif;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
 /*    height: 100vh;*/
-/*    width: 100vw;*/
-/*}*/
-
-/*.flex-row-center-center {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.flex-column-center-center {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    gap: 1em;*/
+/*    background-color: #E0F0E9;*/
 /*}*/
 
 /*.container {*/
-/*    background-color: white;*/
-/*    border-radius: 1em;*/
-/*    padding: 1em;*/
-/*    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;*/
-/*}*/
-
-
-/*form > input, form > button, form > textarea {  !* input name search *!*/
-/*    width: 400px;*/
-/*    border-radius: 1em;*/
-/*    padding: 1em;*/
-/*    border: 0 solid black;*/
-/*    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;*/
-/*}*/
-
-/*form > button, button {*/
-/*    box-sizing: content-box;*/
-/*    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;*/
-/*    background-color: bisque;*/
-/*    font-weight: 600;*/
-/*}*/
-
-/*.sidebar {*/
-/*    width: calc(100% / 3);*/
-/*    align-self: baseline;*/
-/*}*/
-
-/*.main {*/
-/*    width: calc(100% / 3 * 2);*/
-
-/*}*/
-
-/*.projects {*/
-/*    flex-wrap: wrap;*/
-/*    gap: 1.5rem;*/
-/*    justify-content: flex-start;*/
-/*}*/
-
-/*.projects > .card {*/
-/*    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;*/
-/*    border-radius: 1em;*/
-/*    padding: 1em;*/
-/*}*/
-
-/*.projects > .card > img {*/
-/*    margin-top: -1em;*/
-/*    margin-left: -1em;*/
-/*    margin-right: -1em;*/
-/*    border-radius: 1em 1em 0 0 ;*/
-
-/*    width: 300px;*/
-/*    height: 200px;*/
-/*    object-fit: cover;*/
-/*}*/
-
-/*.projects > .card > h2 {*/
-/*    white-space: nowrap;*/
+/*    display: flex;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 10px;*/
 /*    overflow: hidden;*/
-/*    text-overflow: ellipsis;*/
-/*    width: 250px;*/
+/*    max-width: 900px;*/
+/*    width: 100%;*/
+/*    background-color: white;*/
 /*}*/
 
-/*@media screen and (max-width: 480px) {*/
-/*    body {*/
-/*        height: 100vh !important;*/
-/*        margin-top: 0 !important;*/
-/*    }*/
 
+/*.form-container {*/
+/*    width: 70%;*/
+/*    max-width: 600px;*/
+/*    height: 80vh;*/
+/*    max-height: 700px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    margin: 0 auto;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.form-section {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    display: none;*/
+/*}*/
+
+/*.form-section.active {*/
+/*    display: block;*/
+/*}*/
+
+/*.form-container h1 {*/
+/*    margin-bottom: 20px;*/
+/*    font-size: 24px;*/
+/*    color: #333;*/
+/*}*/
+
+/*.form-container p {*/
+/*    margin-bottom: 30px;*/
+/*    color: #666;*/
+/*}*/
+
+/*.form-container label {*/
+/*    display: block;*/
+/*    margin-bottom: 5px;*/
+/*    color: #333;*/
+/*}*/
+
+/*.form-container input {*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 10px;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+
+/*.form-container .options {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.form-container .options label {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.form-container .options input {*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*.form-container .options a {*/
+/*    color: #007BFF;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.form-container button {*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    background-color: #007BFF;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.form-container .signup {*/
+/*    margin-top: 20px;*/
+/*    text-align: center;*/
+/*    color: #666;*/
+/*}*/
+
+/*.form-container .signup a {*/
+/*    color: #007BFF;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*#login-form {*/
+/*    margin: 0 auto;   !* Wyśrodkowanie na stronie *!*/
+/*    padding: 20px;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 10px;*/
+/*    background-color: #f9f9f9;*/
+/*}*/
+
+/*.image-section {*/
+/*    width: 50%;*/
+/*    background: url('../img/balloons.jpg') no-repeat center center/cover;*/
+/*}*/
+
+
+
+/*@media (max-width: 768px) {*/
 /*    .container {*/
-/*        box-sizing: border-box;*/
-/*    }*/
-
-/*    form, .container {*/
-/*        width: 100%;*/
-/*    }*/
-
-/*    form > input,*/
-/*    form > textarea,*/
-/*    form > button {*/
-/*        width: calc(100% - 1em);*/
-/*    }*/
-
-
-/*    .main {*/
-/*        width: 100%;*/
-/*    }*/
-
-/*    .sidebar {*/
-/*        display: none;*/
-/*        margin-left: -70%;*/
-
-/*        position: fixed;*/
-/*        top: 0;*/
-/*        bottom: 0;*/
-/*        left: 0;*/
-/*        width: 70%;*/
-/*        background-color: white;*/
+/*        flex-direction: column;*/
+/*        max-width: 400px;*/
 /*        height: 100vh;*/
 /*    }*/
 
-/*    .add {*/
-/*        display: none;*/
-/*    }*/
-
-/*    .show {*/
-/*        display: block;*/
-/*        margin-left: 0;*/
-/*        !* transition: margin-left 2s ease; *!*/
-/*    }*/
-
-/*    .projects {*/
+/*    .form-container {*/
+/*        width: 100%;*/
+/*        padding: 20px;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
 /*        justify-content: center;*/
 /*    }*/
-/*}*/
 
-
-/*.no-valid {*/
-/*    border: 1px solid red;*/
-/*}*/
-
-/*.form-container {*/
-/*    display: none;*/
-/*}*/
-/*.form-container.active {*/
-/*    display: block;*/
-/*}*/
-
-
-/*button {*/
-/*    padding: 10px 20px;*/
-/*    background-color: #4CAF50; !* Zielony kolor *!*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*button:hover {*/
-/*    background-color: #45a049; !* Ciemniejszy odcień zielonego *!*/
-/*}*/
-
-/*button:active {*/
-/*    background-color: #398438; !* Jeszcze ciemniejszy odcień zielonego po kliknięciu *!*/
-/*}*/
-
-/*form {*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*label {*/
-/*    margin-bottom: 5px;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*input[type="text"],*/
-/*input[type="email"],*/
-/*input[type="password"] {*/
-/*    padding: 10px;*/
-/*    width: 100%;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 5px;*/
-/*    box-sizing: border-box;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-
-/*input[type="submit"] {*/
-/*    padding: 10px 20px;*/
-/*    background-color: #4CAF50; !* Zielony kolor *!*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*input[type="submit"]:hover {*/
-/*    background-color: #45a049; !* Ciemniejszy odcień zielonego po najechaniu myszką *!*/
-/*}*/
-
-/*input[type="submit"]:active {*/
-/*    background-color: #398438; !* Jeszcze ciemniejszy odcień zielonego po kliknięciu *!*/
-/*}*/
-
-/*form {*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*label {*/
-/*    margin-bottom: 5px;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*input[type="username"],*/
-/*input[type="email"],*/
-/*input[type="password"],*/
-/*input[type="confirmPassword"]*/
-/*{*/
-/*    padding: 10px;*/
-/*    width: 100%;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 5px;*/
-/*    box-sizing: border-box;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-
-/*input[type="submit"] {*/
-/*    padding: 10px 20px;*/
-/*    background-color: #4CAF50; !* Zielony kolor *!*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*input[type="submit"]:hover {*/
-/*    background-color: #45a049; !* Ciemniejszy odcień zielonego po najechaniu myszką *!*/
-/*}*/
-
-/*input[type="submit"]:active {*/
-/*    background-color: #398438; !* Jeszcze ciemniejszy odcień zielonego po kliknięciu *!*/
-/*}*/
-
-
-/*.form-container {*/
-/*    margin-top: 20px;*/
-/*    display: none;*/
-/*}*/
-
-/*.form-container.active {*/
-/*    display: block;*/
-/*    animation: fadeIn 0.5s ease-in-out;*/
-/*}*/
-
-/*@keyframes fadeIn {*/
-/*    from {*/
-/*        opacity: 0;*/
+/*    .image-section {*/
+/*        width: 100%;*/
+/*        height: 200px; !* Adjust height as needed *!*/
+/*        background: url('../img/balloons.jpg') no-repeat center center/cover;*/
 /*    }*/
-/*    to {*/
-/*        opacity: 1;*/
+
+/*    a {*/
+/*        word-wrap: break-word;*/
+/*        margin: 80px;*/
 /*    }*/
+
+/*    input[type="text"],*/
+/*    input[type="password"],*/
+/*    input[type="email"],*/
+/*    input[type="checkbox"] {*/
+/*        width: 70%;*/
+/*        padding: 10px;*/
+/*        margin: 8px 0;*/
+/*        box-sizing: border-box;*/
+/*    }*/
+
+/*    button[type="submit"] {*/
+/*        width: 70%;*/
+/*        padding: 12px 20px;*/
+/*        margin: 10px 0;*/
+/*        border: none;*/
+/*        background-color: #4CAF50;*/
+/*        color: white;*/
+/*        cursor: pointer;*/
+/*        border-radius: 4px;*/
+/*    }*/
+
 /*}*/
 
 
-/*h2 {*/
-/*    color: #333; !* Ciemny kolor tekstu *!*/
-/*}*/
 
-/*h3 {*/
-/*    color: #666; !* Średni kolor tekstu *!*/
-/*}*/
+
+
 
 
 body {
@@ -282,6 +194,8 @@ body {
     background-color: #E0F0E9;
 }
 
+
+
 .container {
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -290,25 +204,18 @@ body {
     max-width: 900px;
     width: 100%;
     background-color: white;
+    flex-direction: row;
 }
 
-/*.form-container {*/
-/*    padding: 40px;*/
-/*    width: 50%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*}*/
 
 .form-container {
-    width: 70%; /* Set a width relative to the parent or viewport */
-    max-width: 600px; /* Optional: set a maximum width */
-    height: 80vh; /* Set a height relative to the viewport height */
-    max-height: 700px; /* Optional: set a maximum height */
-    overflow: hidden; /* Prevent content from overflowing */
-    position: relative; /* Position relative for absolute positioned forms */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 70%;
+    height: 80vh;
+    max-height: 700px;
+    overflow: hidden;
+    position: relative;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .form-section {
@@ -354,7 +261,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .form-container .options label {
@@ -393,20 +300,410 @@ body {
     text-decoration: none;
 }
 
+#login-form {
+    width: 100%;
+margin: 0px;
+padding: 10px;
+border: 1px solid #ddd;
+background-color: #f9f9f9;
+box-sizing: border-box;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#register-form {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+#register-form input[type="text"],
+#register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
 .image-section {
-    width: 50%;
+    width: 30%;
     background: url('../img/balloons.jpg') no-repeat center center/cover;
 }
 
 
 
+/*@media (max-width: 768px) {*/
+/*    .container {*/
+/*        flex-direction: column;*/
+/*        max-width: 400px;*/
+/*        height: 100vh;*/
+/*    }*/
+
+/*    .form-container {*/
+/*        width: 100%;*/
+/*        padding: 20px;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        justify-content: center;*/
+/*    }*/
+
+/*    .image-section {*/
+/*        width: 100%;*/
+/*        height: 200px;*/
+/*        background: url('../img/balloons.jpg');*/
+/*        box-sizing: border-box;*/
+/*    }*/
+
+/*    a {*/
+/*        word-wrap: break-word;*/
+/*        margin: 80px;*/
+/*    }*/
+
+/*    input[type="text"],*/
+/*    input[type="password"],*/
+/*    input[type="email"],*/
+/*    input[type="checkbox"] {*/
+/*        width: 70%;*/
+/*        padding: 20px;*/
+/*        margin: 8px 0;*/
+/*        box-sizing: border-box;*/
+/*    }*/
+
+/*    button[type="submit"] {*/
+/*        width: 70%;*/
+/*        padding: 12px 20px;*/
+/*        margin: 10px 0;*/
+/*        border: none;*/
+/*        background-color: #4CAF50;*/
+/*        color: white;*/
+/*        cursor: pointer;*/
+/*        border-radius: 4px;*/
+/*    }*/
+/*}*/
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        max-width: 400px;
+        height: 100vh;
+        justify-content: space-between; /* Spacing between form and image */
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień dla estetyki */
+        border-radius: 10px;
+        overflow: hidden;
     }
-    .form-container, .image-section {
+
+    .form-container {
         width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .form-container h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .form-container p {
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-container label {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="checkbox"] {
+        width: 100%; /* Full width for better touch interaction */
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Full width for buttons */
+        padding: 15px;
+        margin: 15px 0;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .form-container .options {
+        display: flex;
+        flex-direction: row; /* Ustaw w jednym rzędzie */
+        justify-content: space-between; /* Równe odstępy pomiędzy elementami */
+        align-items: center; /* Wyrównaj pionowo do środka */
+        margin-bottom: 15px;
+        width: 100%; /* Rozciągnij opcje na całą szerokość */
+    }
+
+    /*.form-container .options label {*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*}*/
+
+    .form-container .options a {
+        font-size: 14px;
+        color: #007BFF;
+        margin-left: auto; /* Ustaw link po prawej stronie */
+        text-decoration: none;
+    }
+
+    .form-container .options input[type="checkbox"] {
+        margin-right: 5px; /* Dodaj odstęp między checkboxem a tekstem */
+    }
+
+    .form-container .signup {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-container .signup a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .image-section {
+        width: 100%;
+        height: 200px;
+        background: url('../img/balloons.jpg') no-repeat center center/cover;
+        box-sizing: border-box;
+    }
+
+    a {
+        word-wrap: break-word;
+        text-align: center;
     }
 }
 
 
+
+/*!* General Styles *!*/
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: Arial, sans-serif;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*    background-color: #F3F8F5; !* Softer background for a calming look *!*/
+/*}*/
+
+/*!* Container Styles *!*/
+/*.container {*/
+/*    display: flex;*/
+/*    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); !* Deeper shadow for better contrast *!*/
+/*    border-radius: 15px; !* Softer corners for a modern look *!*/
+/*    overflow: hidden;*/
+/*    max-width: 900px;*/
+/*    width: 100%;*/
+/*    background-color: white;*/
+/*    flex-direction: row;*/
+/*    transition: box-shadow 0.3s ease; !* Smooth hover effect *!*/
+/*}*/
+
+/*.container:hover {*/
+/*    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*!* Form Container *!*/
+/*.form-container {*/
+/*    width: 70%;*/
+/*    height: 80vh;*/
+/*    max-height: 700px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    padding: 40px 30px; !* More generous padding *!*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*!* Form Elements *!*/
+/*.form-container h1 {*/
+/*    margin-bottom: 20px;*/
+/*    font-size: 28px;*/
+/*    color: #333;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.form-container p {*/
+/*    margin-bottom: 30px;*/
+/*    color: #666;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.form-container label {*/
+/*    display: block;*/
+/*    margin-bottom: 8px;*/
+/*    font-size: 14px;*/
+/*    color: #555;*/
+/*}*/
+
+/*.form-container input {*/
+/*    width: 100%;*/
+/*    padding: 12px;*/
+/*    margin-bottom: 20px;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 8px; !* Rounded inputs *!*/
+/*    font-size: 16px;*/
+/*    transition: border-color 0.3s ease;*/
+/*}*/
+
+/*.form-container input:focus {*/
+/*    border-color: #007BFF; !* Focused input *!*/
+/*    outline: none;*/
+/*}*/
+
+/*!* Options Section *!*/
+/*.form-container .options {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.form-container .options label {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.form-container .options input {*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*.form-container .options a {*/
+/*    color: #007BFF;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*!* Buttons *!*/
+/*.form-container button {*/
+/*    width: 100%;*/
+/*    padding: 12px;*/
+/*    background-color: #28A745; !* Green for success *!*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 8px; !* Rounded button *!*/
+/*    cursor: pointer;*/
+/*    font-size: 18px;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.form-container button:hover {*/
+/*    background-color: #218838; !* Darker green on hover *!*/
+/*}*/
+
+/*!* Signup Section *!*/
+/*.form-container .signup {*/
+/*    margin-top: 20px;*/
+/*    text-align: center;*/
+/*    color: #666;*/
+/*}*/
+
+/*.form-container .signup a {*/
+/*    color: #007BFF;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.form-section {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    display: none;*/
+/*}*/
+
+/*.form-section.active {*/
+/*    display: block;*/
+/*}*/
+
+/*!* Image Section *!*/
+/*.image-section {*/
+/*    width: 30%;*/
+/*    background: url('../img/balloons.jpg') no-repeat center center/cover;*/
+/*}*/
+
+/*!* Responsive Styles *!*/
+/*@media (max-width: 768px) {*/
+/*    .container {*/
+/*        flex-direction: column;*/
+/*        max-width: 400px;*/
+/*        height: 100vh;*/
+/*    }*/
+
+/*    .form-container {*/
+/*        width: 100%;*/
+/*        padding: 20px;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        justify-content: center;*/
+/*    }*/
+
+/*    .image-section {*/
+/*        width: 100%;*/
+/*        height: 200px;*/
+/*        background: url('../img/balloons.jpg');*/
+/*        box-sizing: border-box;*/
+/*    }*/
+
+/*    a {*/
+/*        word-wrap: break-word;*/
+/*        margin: 80px;*/
+/*    }*/
+
+/*    input[type="text"],*/
+/*    input[type="password"],*/
+/*    input[type="email"],*/
+/*    input[type="checkbox"] {*/
+/*        width: 100%; !* Full-width inputs for better spacing *!*/
+/*        padding: 12px;*/
+/*        margin: 8px 0;*/
+/*        box-sizing: border-box;*/
+/*        border-radius: 6px;*/
+/*    }*/
+
+/*    button[type="submit"] {*/
+/*        width: 100%; !* Full-width button *!*/
+/*        padding: 12px;*/
+/*        margin: 10px 0;*/
+/*        border: none;*/
+/*        background-color: #4CAF50;*/
+/*        color: white;*/
+/*        cursor: pointer;*/
+/*        border-radius: 6px;*/
+/*    }*/
+/*}*/

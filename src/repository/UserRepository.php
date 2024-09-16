@@ -96,17 +96,26 @@ class UserRepository extends Repository
         }
 
         if (!empty($userDetails->getLastName())) {
-            $fields[] = 'username = :username';
-            $params[':username'] = $userDetails->getLastName();
+            $fields[] = 'last_name = :last_name';
+            $params[':last_name'] = $userDetails->getLastName();
         }
 
         if (!empty($userDetails->getAddress())) {
-            $fields[] = 'username = :username';
-            $params[':username'] = $userDetails->getAddress();
+            $fields[] = 'address = :address';
+            $params[':address'] = $userDetails->getAddress();
         }
         if (!empty($userDetails->getBirthdate())) {
-            $fields[] = 'username = :username';
-            $params[':username'] = $userDetails->getBirthdate();
+            $date = $userDetails->getBirthdate();
+            $dateTime = DateTime::createFromFormat('d-m-Y', $date);
+            if ($dateTime) {
+                $formattedDate = $dateTime->format('Y-m-d'); // Konwersja do formatu Y-m-d
+                //$userProfile->birthDate = $formattedDate;
+            } else {
+                throw new Exception('Nieprawidłowy format daty');
+            }
+
+            $fields[] = 'birthdate = :birthdate';
+            $params[':birthdate'] = $formattedDate;
         }
 
 
@@ -140,6 +149,7 @@ class UserRepository extends Repository
 
         // Pobranie wyników
         $userDetails = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $userDetails;
+        $userProfile = new UserProfile($userDetails['first_name'], $userDetails['last_name'], $userDetails['birthdate'], $userDetails['address']);
+        return $userProfile;
     }
 }

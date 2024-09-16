@@ -10,21 +10,29 @@
     <script src="../../../public/scripts/validation.js" defer></script>
     <script src="../../../public/scripts/reservations-script.js" defer></script>
     <script src="../../../public/scripts/apartment-script.js" defer></script>
-
+    <script src="../../../public/scripts/mobile-nav.js" defer></script>
 </head>
 
 <body>
 <header>
-    <nav>
+    <div class="top-nav">
         <div class="logo">
             <img src="logo.png" alt="Logo">
+        </div>
+        <form action="/logout" method="post">
+            <button class="logout-btn">Logout</button>
+        </form>
+    </div>
+    <nav>
+        <div class="nav-toggle" id="nav-toggle">
+            <!-- Hamburger Icon -->
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul class="nav-links">
             <li>
                 <a href="/dashboard">Home Page</a>
-            </li>
-            <li>
-                <a href="">Recommendations</a>
             </li>
             <li>
                 <a href="/reservations">Your trips</a>
@@ -38,9 +46,7 @@
             </li>
             <?php endif ?>
         </ul>
-        <form action="/logout" method="post">
-            <button class="logout-btn">Logout</button>
-        </form>
+
     </nav>
 </header>
 <main>

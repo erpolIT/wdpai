@@ -83,10 +83,6 @@ class SecurityController extends AppController
         }else{
             return $response->withJson(['success' => false, 'errors' => $registerModel->errors]);
         }
-//         return $this->renderView('auth', [
-//            'registerModel' => $registerModel,
-//            'loginForm' => $loginForm
-//        ]);
     }
 
     public function logout(Request $request, Response $response){

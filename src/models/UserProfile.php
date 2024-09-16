@@ -66,8 +66,17 @@ class UserProfile extends Model
     protected string $address = "";
 
     protected string $birthdate = "";
+
+    public function __construct($firstName="", $lastName="", $birthdate="", $address=""){
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->birthdate = $birthdate;
+        $this->address = $address;
+    }
     public function rules()
     {
-        // TODO: Implement rules() method.
+        return[
+            'birthdate' => [[self::RULE_DATE, 'format'=> 'd-m-Y']],
+        ];
     }
 }

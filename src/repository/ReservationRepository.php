@@ -51,4 +51,16 @@ class ReservationRepository extends Repository
             return false;
         }
     }
+
+    public function deleteById($id)
+    {
+        // Przykład zapytania SQL do usunięcia rezerwacji
+        $connection = $this->database->connect();
+        $sql = 'DELETE FROM reservations WHERE id = :id';
+        $stmt = $connection->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        // Wykonaj zapytanie i zwróć wynik (true jeśli operacja się powiodła, false w przeciwnym wypadku)
+        return $stmt->execute();
+    }
 }

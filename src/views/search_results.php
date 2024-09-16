@@ -5,11 +5,12 @@
     <p>No available flight found for the selected dates from <?= $location ?> to <?= $destination ?>.</p>
     <?php else: ?>
         <div class="flight-info">
-            <h2>Informacje o locie</h2>
+            <h2> Flight info</h2>
             <p><label>Departure Time:</label> <?php echo htmlspecialchars($matchingFlights['departure_time']); ?></p>
             <p><label>Arrival Time:</label> <?php echo htmlspecialchars($matchingFlights['arrival_time']); ?></p>
             <p><label>Location:</label> <?php echo htmlspecialchars($matchingFlights['departure_airport']); ?></p>
             <p><label>Destination:</label> <?php echo htmlspecialchars($matchingFlights['arrival_airport']); ?></p>
+            <p><label>Price:</label> <?php echo htmlspecialchars($matchingFlights['price']); ?></p>
         </div>
     <?php endif ?>
 
@@ -35,11 +36,11 @@
 
         </div>
 
-    <?php foreach ($availableApartments as $apartment): ?>
+            <?php foreach ($availableApartments as $apartment): ?>
             <form action="/addReservation" method="post">
                 <div class="apartment-container">
                     <?php if (!empty($matchingFlights)): ?>
-                    <input type="hidden" name="flightId" value="<?= $matchingFlights[0]['id'] ?>">
+                    <input type="hidden" name="flightId" value="<?= $matchingFlights['id'] ?>">
                     <?php endif ?>
                     <input type="hidden" name="apartmentId" value="<?= $apartment['id'] ?>">
                     <input type="hidden" name="startDate" value="<?= $_GET['pickupDate'] ?>">

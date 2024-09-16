@@ -29,7 +29,7 @@ class ReservationController extends AppController
                 $apartmentId = $_POST['apartmentId'];
                 $pickupDate = $_POST['startDate'];
                 $returnDate = $_POST['endDate'];
-                if(isset($flightId)){
+                if(isset($_POST['flightId'])){
                     $flightId = $_POST['flightId'];
                 }
 
@@ -54,6 +54,20 @@ class ReservationController extends AppController
                         'reservations' => $reservations,
                     ]
                 );
+            }
+        }
+
+        public function deleteReservation(Request $request, Response $response, $id){
+            if($request->isDelete()){
+                $result = $this->reservationRepository->deleteById($id);
+
+                if ($result) {
+                    http_response_code(200);
+                    $response->withJson(['success' => true, 'message' => 'Reservation deleted successfully']);
+                } else {
+                    http_response_code(500);
+                    $response->withJson(['success' => false, 'message' => 'Failed to delete reservation']);
+                }
             }
         }
 

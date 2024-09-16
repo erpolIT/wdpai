@@ -10,8 +10,8 @@ function toggleDetails(element) {
 function deleteReservation(id) {
     if (confirm('Are you sure you want to delete this reservation?')) {
         // Send request to delete reservation (implement this in your backend)
-        fetch(`delete_reservation.php?id=${id}`, {
-            method: 'GET'
+        fetch(`/reservations/${id}`, {
+            method: 'DELETE'
         })
             .then(response => {
                 if (response.ok) {

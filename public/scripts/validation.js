@@ -3,30 +3,50 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     function showRegisterForm() {
-        document.getElementById('login-form').classList.remove('active');
-        document.getElementById('register-form').classList.add('active');
-        history.pushState(null, null, 'register');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        if (loginForm && registerForm) {
+            loginForm.classList.remove('active');
+            registerForm.classList.add('active');
+            history.pushState(null, null, 'register');
+        }
     }
 
     function showLoginForm() {
-        document.getElementById('register-form').classList.remove('active');
-        document.getElementById('login-form').classList.add('active');
-        history.pushState(null, null, 'login');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        if (loginForm && registerForm) {
+            registerForm.classList.remove('active');
+            loginForm.classList.add('active');
+            history.pushState(null, null, 'login');
+        }
     }
 
-    document.getElementById('show-register').addEventListener('click', function (event) {
-        event.preventDefault();
-        showRegisterForm();
-    });
+    // Dodanie event listenerów tylko jeśli elementy istnieją
+    const showRegister = document.getElementById('show-register');
+    const showLogin = document.getElementById('show-login');
 
-    document.getElementById('show-login').addEventListener('click', function (event) {
-        event.preventDefault();
-        showLoginForm();
-    });
+    if (showRegister) {
+        showRegister.addEventListener('click', function (event) {
+            event.preventDefault();
+            showRegisterForm();
+        });
+    }
 
-    if (window.location.pathname.endsWith('/register')) {
+    if (showLogin) {
+        showLogin.addEventListener('click', function (event) {
+            event.preventDefault();
+            showLoginForm();
+        });
+    }
+
+    // Sprawdzanie ścieżki URL tylko jeśli formularze istnieją
+    const path = window.location.pathname;
+    if (document.getElementById('register-form') && path.endsWith('/register')) {
         showRegisterForm();
-    } else if (window.location.pathname.endsWith('/login')) {
+    } else if (document.getElementById('login-form') && path.endsWith('/login')) {
         showLoginForm();
     }
 });
@@ -54,9 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .then(data => {
                         if (data.success) {
+                            clearErrors(this);
                             if (data.redirectUrl) {
                                 window.location.href = data.redirectUrl;
                             } else {
+                                window.location.reload()
                                 console.log('Form submitted successfully');
                             }
                         } else {
@@ -92,4 +114,11 @@ function displayErrors(form, errors) {
             inputElement.insertAdjacentElement('afterend', errorElement);
         }
     }
+}
+
+function clearErrors(form) {
+    // Usuń wszystkie komunikaty o błędach
+    form.querySelectorAll('.error-message').forEach(el => el.remove());
+    // Usuń klasę błędu z pól formularza
+    form.querySelectorAll('.error-border').forEach(el => el.classList.remove('error-border'));
 }

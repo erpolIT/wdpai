@@ -17,6 +17,8 @@ abstract class Model
     public const RULE_MIN_VALUE = 'minValue';
     public const RULE_IMAGE = 'image';
 
+    public const RULE_DATE = 'date';
+
 
 
 //    public function setProperty($property, $value) {
@@ -117,6 +119,16 @@ abstract class Model
                             $this->addErrorForRule($attribute, self::RULE_UNIQUE, ['field' => $attribute]);
                         }
                         break;
+                    case self::RULE_DATE:
+                        $format = $rule['format'] ?? 'Y-m-d'; // Możesz przekazać format daty w regułach, domyślnie 'Y-m-d'
+                        $date = \DateTime::createFromFormat($format, $value);
+
+                        // Sprawdza, czy data jest poprawna i czy pasuje do formatu
+                        if (!$date || $date->format($format) !== $value) {
+                            $this->addErrorForRule($attribute, self::RULE_DATE, ['format' => $format]);
+                        }
+                        break;
+
                 }
             }
         }
@@ -148,6 +160,7 @@ abstract class Model
             self::RULE_MATCH => 'This field must be the same as {match}',
             self::RULE_UNIQUE => 'User with this {field} already exists',
             self::RULE_NUMBER => 'This is not valid number',
+            self::RULE_DATE => 'This is not valid date',
         ];
     }
 

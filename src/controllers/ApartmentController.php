@@ -33,7 +33,8 @@ class ApartmentController extends AppController
     {
 
         $searchForm = new SearchApartmentForm();
-
+        $matchingFlights = [];
+        $availableApartments = [];
         if($request->isGet()){
             $searchForm->loadData($request->getBody());
             if($searchForm->validate()){
@@ -48,7 +49,7 @@ class ApartmentController extends AppController
                 'availableApartments' => $availableApartments,
                 'location' => $location,
                 'destination' => $destinaton,
-                'matchingFlights' => $matchingFlights
+                'matchingFlights' => $matchingFlights[0]
             ]
         );
     }

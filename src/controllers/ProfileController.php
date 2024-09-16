@@ -20,6 +20,18 @@ class ProfileController extends AppController
     public function index(Request $request, Response $response){
         if($request->isGet()){
             $userDetails = $this->userRepository->getUserDetails(\Application::getUserId());
+            $date = $userDetails->getBirthdate();
+            $dateTime = DateTime::createFromFormat('Y-m-d', $date);
+            if ($dateTime) {
+                // Konwersja daty do formatu 'Y-m-d' (lub inny wymagany format)
+                $formattedDate = $dateTime->format('d-m-Y');
+
+                $userDetails->setBirthdate($formattedDate);
+            } else {
+                // Obsługa błędu, jeśli data nie jest poprawna
+                throw new Exception('Nieprawidłowy format daty');
+            }
+
             return $this->renderView('profile', [
                 'userDetails' => $userDetails
             ]);
@@ -34,10 +46,11 @@ class ProfileController extends AppController
         if ($request->isPost()) {
             $userProfile->loadData($request->getBody());
             $userProfile->setUserId($this->getUserId());
-            if ($this->userRepository->updateUser($userProfile)) {
+
+            if ($userProfile->validate() && $this->userRepository->updateUser($userProfile)) {
                 return $response->withJson(['success' => true]);
             } else {
-                return $response->withJson(['success' => false, 'message' => 'Error updating profile']);
+                return $response->withJson(['success' => false, 'message' => 'Error updating profile', 'errors' => $userProfile->errors]);
             }
         }
     }
