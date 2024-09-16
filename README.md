@@ -32,7 +32,9 @@ EasyTravel to aplikacja umożliwiająca użytkownikom łatwe planowanie podróż
 ## Użycie
 
 Rejestracja: Użytkownicy mogą się rejestrować i tworzyć swoje konto.
+
 Tworzenie rezerwacji: Wybierz lot i hotel, a następnie dokonaj rezerwacji w jednym kroku.
+
 Zarządzanie rezerwacjami: Przeglądaj swoje podróże, aktualizuj lub anuluj rezerwacje bezpośrednio z panelu użytkownika.
 
 
