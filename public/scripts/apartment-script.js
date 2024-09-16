@@ -3,45 +3,6 @@ function toggleForm() {
     formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
 }
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Pobierz formularz i dodaj nasłuchiwanie na zdarzenie submit
-//     const form = document.getElementById('apartmentForm');
-//     form.addEventListener('submit', function(event) {
-//         event.preventDefault(); // Zatrzymaj domyślną akcję formularza
-//
-//         // Utwórz obiekt FormData do przesyłania danych
-//         const formData = new FormData(form);
-//
-//         // Wysyłanie danych za pomocą fetch
-//         fetch('/apartments/create', {
-//             method: 'POST',
-//             body: formData
-//         })
-//             .then(response => {
-//                 if (!response.ok) {
-//                     throw new Error('Network response was not ok');
-//                 }
-//                 return response.json(); // Parsowanie odpowiedzi jako JSON
-//             })
-//             .then(data => {
-//                 console.log(data);
-//                 if (data.success) {
-//                     // Przekierowanie po pomyślnym dodaniu apartamentu
-//                     window.location.href = '/dashboard';
-//                 } else {
-//                     // Obsługa błędów, np. wyświetlenie komunikatów
-//                     console.error('Dodawanie apartamentu nie powiodło się.');
-//                     // Można dodać kod obsługujący błędy, np. wyświetlenie komunikatu użytkownikowi
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error('Wystąpił błąd podczas wysyłania żądania:', error);
-//                 // Można dodać kod obsługujący błędy, np. wyświetlenie komunikatu użytkownikowi
-//             });
-//     });
-// });
-
 function displayApartments(apartments) {
     console.log(apartments);  // Dodaj to do debugowania danych
     const container = document.getElementById('apartmentsContainer');
