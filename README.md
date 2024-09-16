@@ -1,6 +1,6 @@
 # EasyTravel
 
-EasyTravel to aplikacja umożliwiająca użytkownikom łatwe planowanie podróży poprzez rezerwacje lotów i hoteli w jednym miejscu. Umożliwia wygodną obsługę połączonych rezerwacji, co ułatwia zarządzanie i planowanie podróży.
+EasyTravel to aplikacja umożliwiająca użytkownikom łatwe planowanie podróży poprzez rezerwacje lotów i hoteli w jednym miejscu. Umożliwia wygodną obsługę połączonych rezerwacji, co ułatwia zarządzanie podróżami.
 
 ## Funkcje
 
